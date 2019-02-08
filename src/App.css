@@ -1,32 +1,155 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: Verdana;
+
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: relative;
+  background: #f5f5f5;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.App::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background: #005bea; */
+  /* background: linear-gradient(bottom, #005bea, #00c6fb); */
+  opacity: 0.9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 37px 55px 37px;
+  background: #33B5B3;
+  margin: 100px auto 0;
+}
+
+.login__title {
+  text-align: center;
+  color: #FFF;
+
+}
+
+.loggin__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__button {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #e0e0e0;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+  margin: 20px 0 0 0;
+}
+
+.login__input {
+  font-family: Verdana;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #333333;
+  display: block;
+  width: 100%;
+  background: #fff;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 53px;
+  border: none;
+  outline: none;
+}
+
+.user-info {
+  display: flex;
+  background: #33B5B3;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.user-info__welcome {
+  flex: 1 1 auto;
+}
+
+.user-info__logout {
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  background: #2b9997;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.book {
+  margin: 10px;
+  width: 200px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  background: #FFF;
+}
+
+.book__content {
+  padding: 10px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.book__title {
+  font-size: 16px;
+  color: #666;
+}
+
+.book_image-container {
+  flex: 1 1 auto;
+}
+
+.book__image {
+  width: 210px;
+}
+
+.book__link {
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  background: #33B5B3;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.book__link:hover {
+  background: #2B9997;
 }
